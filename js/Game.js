@@ -33,11 +33,7 @@
      */
     getRandomPhrase() {
         let random = Math.floor(Math.random() * this.phrases.length);
-        this.phrases.forEach((phrase, index) => {
-            if (random == index) {
-                console.log(phrase.phrase) ;
-            }
-        })
+        return this.phrases[random];
     }
 
 

@@ -19,4 +19,6 @@
 // logPhrase(game.getRandomPhrase());
 // logPhrase(game.getRandomPhrase());
 
-game.getRandomPhrase();
+const randomPhrase = game.getRandomPhrase();
+const phrase = new Phrase(randomPhrase.phrase);
+phrase.addPhraseToDisplay();
