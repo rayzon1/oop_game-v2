@@ -17,13 +17,27 @@
      */
     createPhrases() {
         let phrases = [
-            'phrase one',
-            'phrase two',
-            'phrase three',
-            'phrase four',
-            'phrase five'
+            new Phrase('phrase one'),
+            new Phrase('phrase two'),
+            new Phrase('phrase three'),
+            new Phrase('phrase four'),
+            new Phrase('phrase five')
         ];
         return phrases;
+    }
+
+
+    /**
+     * Selects random phrase from the phrases property.
+     * @return {Object} Phrase object chosen to be used.
+     */
+    getRandomPhrase() {
+        let random = Math.floor(Math.random() * this.phrases.length);
+        this.phrases.forEach((phrase, index) => {
+            if (random == index) {
+                console.log(phrase.phrase) ;
+            }
+        })
     }
 
 
