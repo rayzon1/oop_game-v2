@@ -37,6 +37,35 @@
     }
 
 
+    /**
+     * Begins game by selecting the random phrase and displaying it to
+     * the user.
+     */
+    startGame() {
+        $('#overlay').hide();
+        this.activePhrase = this.getRandomPhrase();
+        this.activePhrase.addPhraseToDisplay();
+        
+    }
+
+
+    /**
+     * Logic and handling for user interaction with the keyboard.
+     * @param {letter} This will be the captured click.
+     */
+    handleInteraction(letter) {
+        // Captures letter selected from click event.
+        const phrase = new Phrase(this.activePhrase.phrase);
+        if (phrase.checkLetter(letter)) {
+            phrase.showMatchedLetter(letter); // Pass in letter to display the letter block on board.
+        }
+        
+
+
+
+    }
+
+
 
 
  }

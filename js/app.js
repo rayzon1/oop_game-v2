@@ -4,21 +4,13 @@
 
  const game = new Game();
  
+$('#btn__reset').on('click', function() {
+    game.startGame();
+    
+});
 
-//  game.phrases.forEach((phrase, index) => {
-//      console.log(`Phrase ${index} - phrase: ${phrase.phrase}`);
-//  })
+$('.key').on('click', function() {
+    game.handleInteraction($(this).text());
+})
 
-// const logPhrase = (phrase) => {
-//     console.log(`Phrase - phrase: `, phrase.phrase);
-// };
 
-// logPhrase(game.getRandomPhrase());
-// logPhrase(game.getRandomPhrase());
-// logPhrase(game.getRandomPhrase());
-// logPhrase(game.getRandomPhrase());
-// logPhrase(game.getRandomPhrase());
-
-const randomPhrase = game.getRandomPhrase();
-const phrase = new Phrase(randomPhrase.phrase);
-phrase.addPhraseToDisplay();

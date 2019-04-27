@@ -1,6 +1,8 @@
 /* Treehouse FSJS Techdegree
  * Project 4 - OOP Game App
- * Phrase.js */
+ * Phrase.js 
+ * 
+ * */
 
  class Phrase {
     constructor(phrase) {
@@ -27,6 +29,25 @@
              ul.append($li);
        
         });
+    }
+
+
+    /**
+     * Checks letter value passed in as value against the current active
+     * phrase to see if it is on board.
+     * @param {value} Will hold the value put in / letter captured.
+     */
+    checkLetter(value) {
+        return this.phrase.includes(value);
+    }
+
+    /**
+     * Displays the matched letter on the screen.
+     * @param {value} Will hold the selected letter value. 
+     */
+
+    showMatchedLetter(value) {
+        $(`.${value}`).toggleClass('hide show');
     
     }
 
