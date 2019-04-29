@@ -35,15 +35,19 @@
     /**
      * Checks letter value passed in as value against the current active
      * phrase to see if it is on board.
-     * @param {value} Will hold the value put in / letter captured.
+     * @param {string} Will hold the value put in / letter captured.
+     * @return {boolean} Returns true if letter is in active phrase, false if not.
      */
+
     checkLetter(value) {
         return this.phrase.includes(value);
     }
 
+
     /**
-     * Displays the matched letter on the screen.
-     * @param {value} Will hold the selected letter value. 
+     * Displays the matched letter on the screen, by toggling class
+     * hide and show.
+     * @param {string} Will hold the selected letter value. 
      */
 
     showMatchedLetter(value) {
