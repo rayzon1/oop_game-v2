@@ -13,7 +13,8 @@
  * */
 
 /**
- * Instatiated game class and hide specific tiles / buttons upon load.
+ * New Game() class set to variable which will be instatiated by listeners below
+ * and hide specific tiles / buttons upon load.
  */
 const game = new Game();
 $(".reload").hide();
@@ -38,6 +39,8 @@ $(".key").on("click", function() {
 /**
  * Global Keydown listener for keyboard presses. Pressing keys will trigger
  * a click on the specific letter.
+ * Calls handleInteraction method through simulating a click on associated 
+ * button.
  */
 $(document).on("keydown", function(event) {
   const keys = $(".key");

@@ -53,7 +53,7 @@ class Game {
       $(letter).prop("disabled", true);
       phrase.showMatchedLetter(letter.text());
       letter.addClass("chosen");
-    } else {
+    } else if (!$(letter).prop("disabled")) {
       this.removeLife();
       letter.addClass("wrong");
       $(letter).prop("disabled", true);
@@ -90,6 +90,11 @@ class Game {
     }
   }
 
+  /**
+   * Game over method displays a splash screen and reload button depending on win
+   * or loss.
+   * @param {boolean} outcome Will be either true or false to trigger the method.
+   */
   gameOver(outcome) {
     if (outcome) {
       $("#overlay")
